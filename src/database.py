@@ -177,6 +177,33 @@ class DatabaseManager:
             """, (limit,)).fetchall()
             return [dict(r) for r in rows]
 
+    def get_all_passengers(self) -> List[Dict[str, Any]]:
+        """Mengambil seluruh data akun penumpang terdaftar beserta status rekaman wajahnya."""
+        with self._get_connection() as conn:
+            rows = conn.execute("""
+                SELECT p.nik, p.nama, p.jenis_kelamin, p.telepon, p.foto_path, p.created_at,
+                       CASE WHEN ft.nik IS NOT NULL THEN 1 ELSE 0 END as has_face
+                FROM passengers p
+                LEFT JOIN face_templates ft ON p.nik = ft.nik
+                GROUP BY p.nik
+                ORDER BY p.created_at DESC
+            """).fetchall()
+            return [dict(r) for r in rows]
+
+    def has_face_template(self, nik: str) -> bool:
+        """Memeriksa apakah penumpang dengan NIK ini sudah merekam wajah biometrik."""
+        with self._get_connection() as conn:
+            row = conn.execute("SELECT 1 FROM face_templates WHERE nik = ?", (nik,)).fetchone()
+            return row is not None
+
+    def get_tickets_by_passenger(self, nik: str) -> List[Dict[str, Any]]:
+        """Mengambil seluruh tiket yang dipesan oleh NIK tertentu."""
+        with self._get_connection() as conn:
+            rows = conn.execute("""
+                SELECT * FROM tickets WHERE nik = ? ORDER BY jadwal_berangkat DESC
+            """, (nik,)).fetchall()
+            return [dict(r) for r in rows]
+
     def get_all_passengers_with_tickets(self) -> List[Dict[str, Any]]:
         with self._get_connection() as conn:
             rows = conn.execute("""
