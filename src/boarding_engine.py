@@ -168,6 +168,36 @@ class BoardingGateEngine:
                 "stages": stages
             }
 
+        # Validasi Tanggal Keberangkatan Tiket
+        jadwal_raw = str(active_ticket.get("jadwal_berangkat", ""))
+        hari_ini_str = datetime.now().strftime("%Y-%m-%d")
+        tanggal_tiket = jadwal_raw.split(" ")[0] if " " in jadwal_raw else jadwal_raw
+
+        if tanggal_tiket and len(tanggal_tiket) == 10 and tanggal_tiket != hari_ini_str:
+            self.db.log_gate_event(
+                gate_id=gate_id,
+                nik=nik,
+                nama=passenger_name,
+                ticket_code=ticket_code,
+                status="WRONG_DATE",
+                pesan=f"Tiket {ticket_code} berlaku untuk tanggal {tanggal_tiket}, bukan hari ini ({hari_ini_str}).",
+                confidence=confidence,
+                distance=min_distance
+            )
+            annotated_frame = self.detector.draw_gate_hud(
+                frame_bgr, bbox=bbox, status_text="TANGGAL SALAH", is_success=False, passenger_name=passenger_name
+            )
+            return {
+                "status": "WRONG_DATE",
+                "gate_status": "DENIED",
+                "message": f"Tiket {ticket_code} ({active_ticket['nama_kereta']}) berlaku untuk tanggal {tanggal_tiket}, bukan hari ini ({hari_ini_str}).",
+                "annotated_frame": annotated_frame,
+                "passenger": passenger_info,
+                "ticket": active_ticket,
+                "metrics": {"latency_ms": elapsed_ms, "distance": min_distance, "confidence": confidence},
+                "stages": stages
+            }
+
         # Boarding Sukses: Wajah cocok & Tiket Aktif!
         self.db.mark_ticket_boarded(ticket_code)
         self.db.log_gate_event(

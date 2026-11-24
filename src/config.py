@@ -23,9 +23,12 @@ LBP_GRID_X = 8
 LBP_GRID_Y = 8
 LBP_SIMILARITY_THRESHOLD = 0.22  # Normalized Chi-Square distance threshold (< threshold is match)
 
-# Haar Cascade Paths
-HAAR_CASCADE_PATH = os.path.join(cv2.data.haarcascades, "haarcascade_frontalface_default.xml")
-HAAR_EYE_PATH = os.path.join(cv2.data.haarcascades, "haarcascade_eye.xml")
+# Haar Cascade Paths (mencari di folder data/ proyek terlebih dahulu)
+LOCAL_HAAR_FACE = os.path.join(DATA_DIR, "haarcascade_frontalface_default.xml")
+LOCAL_HAAR_EYE = os.path.join(DATA_DIR, "haarcascade_eye.xml")
+
+HAAR_CASCADE_PATH = LOCAL_HAAR_FACE if os.path.exists(LOCAL_HAAR_FACE) else os.path.join(getattr(cv2.data, "haarcascades", ""), "haarcascade_frontalface_default.xml")
+HAAR_EYE_PATH = LOCAL_HAAR_EYE if os.path.exists(LOCAL_HAAR_EYE) else os.path.join(getattr(cv2.data, "haarcascades", ""), "haarcascade_eye.xml")
 
 # KAI Business Rules
 TRAIN_DEPARTURE_GATE_WINDOW_HOURS = 2  # Boarding dibuka 2 jam sebelum keberangkatan

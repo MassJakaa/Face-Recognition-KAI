@@ -1,6 +1,7 @@
 import os
 import cv2
 import numpy as np
+from datetime import datetime
 from src.config import SAMPLE_FACES_DIR
 from src.database import DatabaseManager
 from src.detector import FaceDetector
@@ -18,6 +19,8 @@ def seed_database():
     extractor = LBPHFeatureExtractor()
     os.makedirs(SAMPLE_FACES_DIR, exist_ok=True)
 
+    today_str = datetime.now().strftime("%Y-%m-%d")
+
     passengers_data = [
         {
             "nik": "3273011204980001",
@@ -29,7 +32,7 @@ def seed_database():
                 "code": "KAI-7G4B9X",
                 "kereta": "Argo Parahyangan (KA 35)",
                 "relasi": "Gambir (GMR) - Bandung (BD)",
-                "jadwal": "2026-11-25 08:30:00",
+                "jadwal": f"{today_str} 08:30:00",
                 "kursi": "Eksekutif 2 / 12A",
                 "status": "ACTIVE"
             }
@@ -44,7 +47,7 @@ def seed_database():
                 "code": "KAI-3M9K2L",
                 "kereta": "Taksaka (KA 68)",
                 "relasi": "Gambir (GMR) - Yogyakarta (YK)",
-                "jadwal": "2026-11-25 09:15:00",
+                "jadwal": f"{today_str} 09:15:00",
                 "kursi": "Eksekutif 1 / 4D",
                 "status": "ACTIVE"
             }
@@ -59,7 +62,7 @@ def seed_database():
                 "code": "KAI-8V2P4Q",
                 "kereta": "Argo Bromo Anggrek (KA 2)",
                 "relasi": "Gambir (GMR) - Surabaya Pasarturi (SBI)",
-                "jadwal": "2026-11-25 07:00:00",
+                "jadwal": f"{today_str} 07:00:00",
                 "kursi": "Luxury 1 / 2A",
                 "status": "BOARDED"  # Tiket sudah pernah dipakai (uji kondisi gagal)
             }
@@ -74,7 +77,7 @@ def seed_database():
                 "code": "KAI-5T7H1Y",
                 "kereta": "Lodaya (KA 92)",
                 "relasi": "Bandung (BD) - Solo Balapan (SLO)",
-                "jadwal": "2026-11-25 10:00:00",
+                "jadwal": f"{today_str} 10:00:00",
                 "kursi": "Eksekutif 3 / 8B",
                 "status": "ACTIVE"
             }
