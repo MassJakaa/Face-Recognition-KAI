@@ -11,13 +11,12 @@ Panduan ini disusun khusus untuk mempersiapkan demonstrasi langsung (*live demo*
 
 ## 👥 1. PEMBAGIAN PERAN & GILIRAN BICARA (DURASI TOTAL: 15 MENIT)
 
-| No. | Nama Mahasiswa | Peran | Durasi | Materi yang Dipresentasikan |
+| No. | Nama Mahasiswa / NIM | Peran | Durasi | Materi yang Dipresentasikan |
 | :---: | :--- | :--- | :---: | :--- |
-| 1. | **Muhammad Fadhil Pratama** (Ketua) | *Opening & Problem Statement* | 2.5 Menit | Pembukaan, latar belakang masalah antrean stasiun KAI, tujuan proyek, dan ikhtisar arsitektur sistem *smart gate*. |
-| 2. | **Nabila Putri Ramadhani** | *Image Preprocessing Specialist* | 3.0 Menit | Penjelasan teoritis & matematis: Grayscale ITU-R BT.601, Filter Bilateral (anti-derau), dan CLAHE (normalisasi pencahayaan ubin $8 \times 8$). |
-| 3. | **Bagus Aryo Wicaksono** | *Feature Extraction & Metric* | 3.0 Menit | Penjelasan ekstraksi tekstur spasial LBPH ($8 \times 8$ sel, $16.384$ dimensi), perbandingan jarak statistik $\chi^2$ (*Chi-Square*), dan *thresholding*. |
-| 4. | **Jessica Aurelia Tan** | *Live Demo Operator* | 4.0 Menit | Mendemonstrasikan 5 skenario nyata pada aplikasi Streamlit: penumpang sah, *anti double-entry*, tanpa tiket, penyusup, dan registrasi baru. |
-| 5. | **Rizky Dwi Kurniawan** | *Evaluation & Closing* | 2.5 Menit | Pembahasan grafik evaluasi kuantitatif (Confusion Matrix, kurva FAR-FRR, uji ketahanan stasiun, latensi 34,9 ms / 28,6 FPS), dan kesimpulan. |
+| 1. | **Rafi Dzaka Pratama Putra** (123240104) | *Opening & Business Logic* | 3.5 Menit | Pembukaan, latar belakang masalah stasiun KAI, arsitektur database SQLite, dan alur pemisahan registrasi akun muka vs pemesanan tiket. |
+| 2. | **Ichsan Wahyu Priambudi** (123240122) | *Image Processing Specialist* | 4.0 Menit | Penjelasan metode pengolahan citra: Deteksi Haar, penyejajaran mata (*eye alignment*), Grayscale, Filter Bilateral, CLAHE, dan ekstraksi ciri LBPH ($16.384$ dimensi). |
+| 3. | **Raihan Natawangsa** (123240120) | *Live Demo Operator* | 4.5 Menit | Mendemonstrasikan aplikasi web Streamlit: pendaftaran akun baru, pemesanan tiket cukup NIK, simulasi scan gate (akses diterima, tiket ganda, tanggal salah, impostor). |
+| 4. | **Indra Naufal Firdaus** (123240195) | *Evaluation & Closing* | 3.0 Menit | Pembahasan grafik evaluasi kuantitatif (Confusion Matrix, kurva FAR-FRR, ketahanan kondisi stasiun, latensi 34,9 ms / 28,6 FPS), dan kesimpulan. |
 
 ---
 
@@ -27,7 +26,7 @@ Panduan ini disusun khusus untuk mempersiapkan demonstrasi langsung (*live demo*
 1. Buka terminal di direktori proyek:
    ```powershell
    cd "d:\.KULIAH\Semester 5\Pengolahan Citra"
-   streamlit run app.py
+   python -m streamlit run app.py
    ```
 2. Aplikasi akan terbuka di `http://localhost:8501`. Pastikan proyektor menampilkan layar penuh (*Full Screen* / F11).
 

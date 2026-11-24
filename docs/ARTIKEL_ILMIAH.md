@@ -5,9 +5,9 @@
 
 # Optimasi Pengenalan Wajah Otomatis pada Smart Boarding Gate Stasiun Kereta Api Menggunakan CLAHE dan Local Binary Pattern Histogram (LBPH)
 
-**Muhammad Fadhil Pratama$^{1,*}$, Nabila Putri Ramadhani$^1$, Bagus Aryo Wicaksono$^1$, Jessica Aurelia Tan$^1$, Rizky Dwi Kurniawan$^1$**  
-$^1$Program Studi Teknik Informatika, Fakultas Teknologi Informasi, Universitas Komputer Indonesia  
-$^*$Penulis Korespondensi: `fadhil.pratama@mahasiswa.ac.id`
+**Rafi Dzaka Pratama Putra$^{1,*}$, Raihan Natawangsa$^1$, Ichsan Wahyu Priambudi$^1$, Indra Naufal Firdaus$^1$**  
+$^1$Program Studi S1 Informatika, Fakultas Teknologi Informasi  
+$^*$Penulis Korespondensi: `rafidzaka5@gmail.com`
 
 ---
 

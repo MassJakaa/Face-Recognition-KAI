@@ -7,15 +7,14 @@
 
 ---
 
-**Disusun oleh: Kelompok 4 (Informatika - Kelas PCD-A)**
+**Disusun oleh: Kelompok Pengolahan Citra IF-B**
 
 | No. | Nama Mahasiswa | NIM | Program Studi |
 | :---: | :--- | :---: | :---: |
-| 1. | **Muhammad Fadhil Pratama** (Ketua) | 10122001 | S1 Informatika |
-| 2. | **Nabila Putri Ramadhani** | 10122015 | S1 Informatika |
-| 3. | **Bagus Aryo Wicaksono** | 10122028 | S1 Informatika |
-| 4. | **Jessica Aurelia Tan** | 10122042 | S1 Informatika |
-| 5. | **Rizky Dwi Kurniawan** | 10122057 | S1 Informatika |
+| 1. | **Rafi Dzaka Pratama Putra** | 123240104 | S1 Informatika |
+| 2. | **Raihan Natawangsa** | 123240120 | S1 Informatika |
+| 3. | **Ichsan Wahyu Priambudi** | 123240122 | S1 Informatika |
+| 4. | **Indra Naufal Firdaus** | 123240195 | S1 Informatika |
 
 **Dosen Pengampu:**  
 Dr. Ir. Hendra Kusuma, M.T. / Tim Dosen Pengolahan Citra Digital  
@@ -417,8 +416,7 @@ Sesuai dengan ketentuan umum Bagian 3 dokumen tugas proyek, setiap anggota kelom
 
 | No. | Nama Mahasiswa / NIM | Peran Utama | Rincian Tanggung Jawab & Kontribusi Nyata |
 | :---: | :--- | :--- | :--- |
-| 1. | **Muhammad Fadhil Pratama** (10122001) | *Project Lead* & Arsitek Sistem | Mengkoordinasikan desain arsitektur, merancang alur kerja pipeline pengolahan citra, mengimplementasikan modul mesin boarding (`src/boarding_engine.py`), dan memimpin penyusunan draf artikel ilmiah. |
-| 2. | **Nabila Putri Ramadhani** (10122015) | *Image Processing Specialist* | Merancang dan mengimplementasikan modul prapemrosesan (`src/preprocessing.py`: Grayscale, Bilateral Filter, CLAHE), analisis variasi pencahayaan, serta visualisasi perbandingan tahapan citra. |
-| 3. | **Bagus Aryo Wicaksono** (10122028) | *Algorithm & Feature Engineer* | Mengimplementasikan algoritma ekstraksi ciri *Local Binary Pattern Histogram* (`src/feature_extractor.py`), fungsi komparasi jarak *Chi-Square* statistik, dan perbandingan dengan metode PCA Eigenfaces. |
-| 4. | **Jessica Aurelia Tan** (10122042) | *UI/UX & Database Developer* | Mengembangkan antarmuka interaktif Streamlit (`app.py`) bertema korporat KAI, modul basis data SQLite (`src/database.py`), kios pendaftaran profil wajah, dan pelacakan riwayat audit log. |
-| 5. | **Rizky Dwi Kurniawan** (10122057) | *QA, Evaluation & Benchmarking* | Menyusun skenario pengujian variasi lingkungan, mengimplementasikan modul evaluasi metrik (`src/evaluator.py`), mengukur latensi eksekusi (FPS), serta menyusun dokumen laporan akhir BAB IV dan V. |
+| 1. | **Rafi Dzaka Pratama Putra** (123240104) | *Database, Tiket & Integrasi* | Merancang skema basis data SQLite, aturan bisnis manifest tiket kereta api, alur pemesanan tiket terpisah, dan integrasi modul boarding gate (`src/boarding_engine.py` & `src/database.py`). |
+| 2. | **Raihan Natawangsa** (123240120) | *UI/UX & Frontend Developer* | Mengembangkan antarmuka web interaktif Streamlit (`app.py`) bertema korporat KAI, visualisasi bounding box HUD sensor gate, dan desain E-Boarding Pass elektronik. |
+| 3. | **Ichsan Wahyu Priambudi** (123240122) | *Deteksi Wajah & Ekstraksi Ciri* | Mengimplementasikan modul deteksi wajah hybrid, penyejajaran mata (`align_face`), prapemrosesan CLAHE/Bilateral Filter, dan ekstraksi ciri tekstur spasial LBPH ($16.384$ dimensi). |
+| 4. | **Indra Naufal Firdaus** (123240195) | *Dataset, Evaluasi & Benchmarking* | Menyusun dataset citra validasi, mengimplementasikan modul pengujian metrik (`src/evaluator.py`), analisis kurva FAR/FRR, dan pengujian ketahanan terhadap fluktuasi pencahayaan. |
