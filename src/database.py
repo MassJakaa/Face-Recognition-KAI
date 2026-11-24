@@ -113,6 +113,15 @@ class DatabaseManager:
             """, (ticket_code, nik, nama_kereta, relasi, jadwal_berangkat, gerbong_kursi, status_tiket))
             conn.commit()
 
+    def next_ticket_code(self) -> str:
+        """Kode tiket berikutnya yang belum dipakai: KAI-000001, KAI-000002, ..."""
+        with self._get_connection() as conn:
+            row = conn.execute(
+                "SELECT MAX(CAST(SUBSTR(ticket_code, 5) AS INTEGER)) FROM tickets "
+                "WHERE ticket_code GLOB 'KAI-[0-9][0-9][0-9][0-9][0-9][0-9]'"
+            ).fetchone()
+        return f"KAI-{(row[0] or 0) + 1:06d}"
+
     def get_all_templates(self, method: str = "LBPH") -> List[Dict[str, Any]]:
         """Mengambil seluruh biometrik wajah terdaftar untuk pencocokan 1:N."""
         with self._get_connection() as conn:

@@ -13,6 +13,8 @@ from src.config import (
     FACE_TARGET_SIZE
 )
 from src.database import DatabaseManager
+from src.validators import validate_nik
+from src.katalog import RUTE_KERETA, relasi_opsi
 from src.detector import FaceDetector
 from src.preprocessing import ImagePreprocessor
 from src.feature_extractor import LBPHFeatureExtractor
@@ -198,13 +200,18 @@ if menu == "1. 👤 Registrasi Akun & Wajah":
 
     with col_form:
         st.markdown("##### **1. Informasi Identitas Diri (e-KTP)**")
-        nik_reg = st.text_input("Nomor Induk Kependudukan (NIK 16 Digit):", placeholder="Contoh: 3273012809980007")
+        nik_reg = st.text_input("Nomor Induk Kependudukan (NIK 16 Digit):", placeholder="Contoh: 3273012809980007", max_chars=16).strip()
         nama_reg = st.text_input("Nama Lengkap (Sesuai KTP):", placeholder="Contoh: Muhammad Ihsan")
         gender_reg = st.selectbox("Jenis Kelamin:", ["Laki-laki", "Perempuan"])
         telp_reg = st.text_input("Nomor Handphone / WhatsApp:", placeholder="Contoh: 081234567890")
 
         # Cek apakah NIK sudah pernah terdaftar
-        if nik_reg and len(nik_reg) >= 5:
+        nik_reg_ok = False
+        if nik_reg:
+            nik_reg_ok, pesan_nik = validate_nik(nik_reg)
+            if not nik_reg_ok:
+                st.error(pesan_nik)
+        if nik_reg_ok:
             existing = db.get_passenger(nik_reg)
             if existing:
                 st.warning(f"⚠️ NIK {nik_reg} sudah terdaftar atas nama **{existing['nama']}**. Jika mendaftar ulang, data wajah akan diperbarui.")
@@ -230,6 +237,8 @@ if menu == "1. 👤 Registrasi Akun & Wajah":
         if st.button("💾 Daftarkan Akun & Rekam Wajah", type="primary", use_container_width=True):
             if not nik_reg or not nama_reg:
                 st.error("Mohon lengkapi NIK dan Nama Lengkap!")
+            elif not nik_reg_ok:
+                st.error("NIK tidak valid, cek pesan di atas.")
             elif face_input_bgr is None:
                 st.error("Silakan ambil foto atau unggah gambar wajah terlebih dahulu!")
             else:
@@ -289,14 +298,19 @@ elif menu == "2. 🎫 Pemesanan Tiket (Booking)":
                 nik_val = sel_acc["nik"]
                 nama_val = sel_acc["nama"]
 
-        input_nik = st.text_input("Nomor Induk Kependudukan (NIK):", value=nik_val, placeholder="Ketik NIK 16 digit...")
+        input_nik = st.text_input("Nomor Induk Kependudukan (NIK):", value=nik_val, placeholder="Ketik NIK 16 digit...", max_chars=16).strip()
+        input_nik_ok = False
+        if input_nik:
+            input_nik_ok, pesan_nik_b = validate_nik(input_nik)
+            if not input_nik_ok:
+                st.error(pesan_nik_b)
         input_nama = st.text_input("Nama Penumpang:", value=nama_val, placeholder="Ketik nama penumpang...")
 
         # Validasi otomatis status biometrik wajah
         has_face = False
         passenger_db_info = None
 
-        if input_nik:
+        if input_nik_ok:
             passenger_db_info = db.get_passenger(input_nik)
             has_face = db.has_face_template(input_nik)
 
@@ -322,32 +336,11 @@ elif menu == "2. 🎫 Pemesanan Tiket (Booking)":
         
         k_col1, k_col2 = st.columns(2)
         with k_col1:
-            nama_kereta = st.selectbox(
-                "Pilihan Kereta Api:",
-                [
-                    "Argo Parahyangan (KA 35)",
-                    "Taksaka (KA 68)",
-                    "Argo Bromo Anggrek (KA 2)",
-                    "Lodaya (KA 92)",
-                    "Gajayana (KA 55)",
-                    "Turangga (KA 65)",
-                    "Sembrani (KA 63)"
-                ]
-            )
+            nama_kereta = st.selectbox("Pilihan Kereta Api:", list(RUTE_KERETA))
             kelas_kereta = st.selectbox("Kelas Kereta:", ["Eksekutif", "Luxury Sleeper", "Bisnis", "Ekonomi Premium"])
 
         with k_col2:
-            relasi_stasiun = st.selectbox(
-                "Rute Perjalanan (Relasi):",
-                [
-                    "Gambir (GMR) - Bandung (BD)",
-                    "Gambir (GMR) - Yogyakarta (YK)",
-                    "Gambir (GMR) - Surabaya Pasarturi (SBI)",
-                    "Bandung (BD) - Solo Balapan (SLO)",
-                    "Gambir (GMR) - Malang (ML)",
-                    "Surabaya Gubeng (SGU) - Bandung (BD)"
-                ]
-            )
+            relasi_stasiun = st.selectbox("Rute Perjalanan (Relasi):", relasi_opsi(nama_kereta))
             nomor_kursi = st.selectbox(
                 "Gerbong & Nomor Kursi:",
                 [
@@ -366,11 +359,13 @@ elif menu == "2. 🎫 Pemesanan Tiket (Booking)":
         jadwal_str = f"{tgl_berangkat} {jam_berangkat}"
 
         # Generate Kode Booking unik PNR
-        generated_code = "KAI-" + str(np.random.randint(100000, 999999))
+        generated_code = db.next_ticket_code()
 
         if st.button("💳 Konfirmasi & Terbitkan Tiket Kereta", type="primary", use_container_width=True):
             if not input_nik or not input_nama:
                 st.error("Mohon isi NIK dan Nama Penumpang terlebih dahulu!")
+            elif not input_nik_ok:
+                st.error("NIK tidak valid, cek pesan di atas.")
             else:
                 # Jika NIK belum ada di tabel penumpang, simpan dasar dulu
                 if not passenger_db_info:
