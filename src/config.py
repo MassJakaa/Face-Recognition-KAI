@@ -21,7 +21,7 @@ LBP_RADIUS = 1
 LBP_NEIGHBORS = 8
 LBP_GRID_X = 8
 LBP_GRID_Y = 8
-LBP_SIMILARITY_THRESHOLD = 0.245  # Normalized Chi-Square distance threshold (< threshold is match)
+LBP_SIMILARITY_THRESHOLD = 0.22  # Normalized Chi-Square distance threshold (< threshold is match)
 
 # Haar Cascade Paths
 HAAR_CASCADE_PATH = os.path.join(cv2.data.haarcascades, "haarcascade_frontalface_default.xml")

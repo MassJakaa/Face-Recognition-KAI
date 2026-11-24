@@ -65,7 +65,7 @@ class SystemEvaluator:
     def run_benchmark_suite(
         self,
         registered_faces: Dict[str, np.ndarray],
-        threshold: float = 0.245
+        threshold: float = 0.22
     ) -> Dict[str, Any]:
         """
         Menjalankan pengujian komprehensif pada berbagai skenario kondisi stasiun.

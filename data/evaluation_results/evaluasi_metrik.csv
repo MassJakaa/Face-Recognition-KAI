@@ -1,2 +1,2 @@
 Akurasi,Presisi,Recall,F1-Score,FAR (False Acceptance Rate),FRR (False Rejection Rate),Total Sampel
-76.00%,100.00%,52.00%,68.42%,0.00%,48.00%,50
+90.00%,100.00%,80.00%,88.89%,0.00%,20.00%,50
