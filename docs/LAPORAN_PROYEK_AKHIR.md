@@ -356,18 +356,18 @@ Berdasarkan perancangan, implementasi, dan pengujian yang telah dilakukan, dapat
 
 ## DAFTAR PUSTAKA
 
-1. Rahman, A., Hidayat, T., & Wibowo, S. (2024). Robust Face Recognition Under Extreme Illumination Variations Using CLAHE and Spatial Local Binary Patterns. *IEEE Access*, 12, 45210-45221. https://doi.org/10.1109/ACCESS.2024.3389102
-2. Pratama, M. R., & Santoso, B. (2023). Real-Time Passenger Verification System for Smart Railway Stations Using Computer Vision. *Journal of King Saud University - Computer and Information Sciences*, 35(8), 101654. https://doi.org/10.1016/j.jksuci.2023.101654
-3. Nugroho, A. S., Putra, E., & Lestari, D. (2024). Comparative Analysis of Texture Descriptors for Automated Biometric Access Control. *Pattern Recognition Letters*, 178, 89-97. https://doi.org/10.1016/j.patrec.2024.01.015
-4. Ahonen, T., Hadid, A., & Pietikäinen, M. (2022). Face Description with Local Binary Patterns: Application to Face Recognition Revisited. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 44(5), 2314-2328. https://doi.org/10.1109/TPAMI.2022.3145620
-5. Widodo, A., Sulistyo, H., & Kurniawan, D. (2025). Automated Boarding Gate Architecture Using Multi-Factor Biometrics in Mass Transit Systems. *Transportation Research Part C: Emerging Technologies*, 162, 104590. https://doi.org/10.1016/j.trc.2025.104590
-6. Zhang, L., Yang, M., & Feng, X. (2023). Sparse Representation and Local Histogram Comparison for Robust Face Identification. *Image and Vision Computing*, 131, 104632. https://doi.org/10.1016/j.imavis.2023.104632
-7. Ojala, T., Pietikäinen, M., & Mäenpää, T. (2002). Multiresolution Gray-Scale and Rotation Invariant Texture Classification with Local Binary Patterns. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 24(7), 971-987. https://doi.org/10.1109/TPAMI.2002.1017623
-8. Viola, P., & Jones, M. J. (2004). Robust Real-Time Face Detection. *International Journal of Computer Vision*, 57(2), 137-154. https://doi.org/10.1023/B:VISI.0000013087.49260.fb
-9. Reza, A. M. (2004). Realization of the Contrast Limited Adaptive Histogram Equalization (CLAHE) for Real-Time Image Enhancement. *Journal of VLSI Signal Processing Systems*, 38(1), 35-44. https://doi.org/10.1023/B:VLSI.0000028530.59993.21
-10. Kumar, P., & Sharma, R. (2023). Illumination Invariant Face Recognition Using Adaptive Histogram Equalization and Deep Embeddings. *Expert Systems with Applications*, 213, 118942. https://doi.org/10.1016/j.eswa.2022.118942
-11. Setiawan, H., & Arifin, Z. (2024). Evaluasi Kinerja Algoritma Pengenalan Wajah pada Sistem Absensi Terbuka di Lingkungan Berpencahayaan Dinamis. *Jurnal Teknologi Informasi dan Ilmu Komputer (JTIIK)*, 11(2), 345-354. https://doi.org/10.25126/jtiik.2024112678
-12. Fauzi, A., & Maryanto, B. (2023). Implementasi Filter Bilateral dan Ekualisasi Histogram Adaptif untuk Peningkatan Kualitas Citra Pengawasan Stasiun. *Jurnal Ilmiah Informatika Komputer*, 28(3), 210-221. https://doi.org/10.35760/ik.2023.v28i3.8901
+1. Patil, S., Trivedi, S., Jani, J., Shah, S., & Kanani, P. (2021). Digitized Railway Ticket Verification Using Facial Recognition. *2021 5th International Conference on Intelligent Computing and Control Systems (ICICCS)*, Madurai, India, 1162–1167. https://doi.org/10.1109/ICICCS51141.2021.9432371
+2. Farokhah, L. (2021). Perbandingan Metode Deteksi Wajah Menggunakan OpenCV Haar Cascade, OpenCV Single Shot Multibox Detector (SSD) dan DLib CNN. *Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi)*, 5(3), 585–593. https://doi.org/10.29207/resti.v5i3.3125
+3. Musa, P., Rafi, F. A., & Lamsani, M. (2018). A Review: Contrast-Limited Adaptive Histogram Equalization (CLAHE) Methods to Help the Application of Face Recognition. *2018 Third International Conference on Informatics and Computing (ICIC)*, Palembang, Indonesia, 1–6. https://doi.org/10.1109/IAC.2018.8780492
+4. Tomasi, C., & Manduchi, R. (1998). Bilateral Filtering for Gray and Color Images. *Proceedings of the Sixth IEEE International Conference on Computer Vision (ICCV)*, Bombay, India, 839–846. https://doi.org/10.1109/ICCV.1998.710815
+5. Yudi, E. D., Kunang, Y. N., & Zarkasi, A. (2024). The Memory Efficiency in a Receptionist Robot's Face Recognition System Using LBPH Algorithm. *Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi)*, 8(6), 719–729. https://doi.org/10.29207/resti.v8i6.6048
+6. Reza, A. M. (2004). Realization of the Contrast Limited Adaptive Histogram Equalization (CLAHE) for Real-Time Image Enhancement. *The Journal of VLSI Signal Processing-Systems for Signal, Image, and Video Technology*, 38(1), 35–44. https://doi.org/10.1023/B:VLSI.0000028532.53893.82
+7. Paul, K. C., & Aslan, S. (2021). An Improved Real-Time Face Recognition System at Low Resolution Based on Local Binary Pattern Histogram Algorithm and CLAHE. *arXiv preprint arXiv:2104.09543*, 1–9. https://doi.org/10.48550/arXiv.2104.09543
+8. Ojala, T., Pietikäinen, M., & Mäenpää, T. (2002). Multiresolution Gray-Scale and Rotation Invariant Texture Classification with Local Binary Patterns. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 24(7), 971–987. https://doi.org/10.1109/TPAMI.2002.1017623
+9. Ahonen, T., Hadid, A., & Pietikäinen, M. (2006). Face Description with Local Binary Patterns: Application to Face Recognition. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 28(12), 2037–2041. https://doi.org/10.1109/TPAMI.2006.244
+10. Viola, P., & Jones, M. J. (2004). Robust Real-Time Face Detection. *International Journal of Computer Vision*, 57(2), 137–154. https://doi.org/10.1023/B:VISI.0000013087.49260.fb
+11. Kosasih, R., & Daomara, C. (2021). Pengenalan Wajah dengan Menggunakan Metode Local Binary Patterns Histograms (LBPH). *Jurnal Media Informatika Budidarma*, 5(4), 1361–1367. https://doi.org/10.30865/mib.v5i4.3217
+12. Vu, H. N., Nguyen, M. H., & Pham, C. (2022). Masked Face Recognition with Convolutional Neural Networks and Local Binary Patterns. *Applied Intelligence*, 52(5), 5497–5512. https://doi.org/10.1007/s10489-021-02728-1
 
 ---
 

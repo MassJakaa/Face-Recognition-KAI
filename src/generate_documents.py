@@ -223,18 +223,18 @@ def generate_laporan_docx():
     # DAFTAR PUSTAKA
     doc.add_heading("DAFTAR PUSTAKA", level=1)
     refs = [
-        "Widodo, A., Sulistyo, H., & Kurniawan, D. (2025). Automated Boarding Gate Architecture Using Multi-Factor Biometrics in Mass Transit Systems. Transportation Research Part C: Emerging Technologies, 162, 104590.",
-        "Pratama, M. R., & Santoso, B. (2023). Real-Time Passenger Verification System for Smart Railway Stations Using Computer Vision. Journal of King Saud University - Computer and Information Sciences, 35(8), 101654.",
-        "Rahman, A., Hidayat, T., & Wibowo, S. (2024). Robust Face Recognition Under Extreme Illumination Variations Using CLAHE and Spatial Local Binary Patterns. IEEE Access, 12, 45210-45221.",
-        "Fauzi, A., & Maryanto, B. (2023). Implementasi Filter Bilateral dan Ekualisasi Histogram Adaptif untuk Peningkatan Kualitas Citra Pengawasan Stasiun. Jurnal Ilmiah Informatika Komputer, 28(3), 210-221.",
-        "Nugroho, A. S., Putra, E., & Lestari, D. (2024). Comparative Analysis of Texture Descriptors for Automated Biometric Access Control. Pattern Recognition Letters, 178, 89-97.",
-        "Reza, A. M. (2004). Realization of the Contrast Limited Adaptive Histogram Equalization (CLAHE) for Real-Time Image Enhancement. Journal of VLSI Signal Processing Systems, 38(1), 35-44.",
-        "Ahonen, T., Hadid, A., & Pietikäinen, M. (2022). Face Description with Local Binary Patterns: Application to Face Recognition Revisited. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(5), 2314-2328.",
-        "Viola, P., & Jones, M. J. (2004). Robust Real-Time Face Detection. International Journal of Computer Vision, 57(2), 137-154.",
-        "Ojala, T., Pietikäinen, M., & Mäenpää, T. (2002). Multiresolution Gray-Scale and Rotation Invariant Texture Classification with Local Binary Patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence, 24(7), 971-987.",
-        "Zhang, L., Yang, M., & Feng, X. (2023). Sparse Representation and Local Histogram Comparison for Robust Face Identification. Image and Vision Computing, 131, 104632.",
-        "Kumar, P., & Sharma, R. (2023). Illumination Invariant Face Recognition Using Adaptive Histogram Equalization and Deep Embeddings. Expert Systems with Applications, 213, 118942.",
-        "Setiawan, H., & Arifin, Z. (2024). Evaluasi Kinerja Algoritma Pengenalan Wajah pada Sistem Absensi Terbuka di Lingkungan Berpencahayaan Dinamis. Jurnal Teknologi Informasi dan Ilmu Komputer (JTIIK), 11(2), 345-354."
+        "1. Patil, S., Trivedi, S., Jani, J., Shah, S., & Kanani, P. (2021). Digitized Railway Ticket Verification Using Facial Recognition. 2021 5th International Conference on Intelligent Computing and Control Systems (ICICCS), Madurai, India, 1162–1167. https://doi.org/10.1109/ICICCS51141.2021.9432371",
+        "2. Farokhah, L. (2021). Perbandingan Metode Deteksi Wajah Menggunakan OpenCV Haar Cascade, OpenCV Single Shot Multibox Detector (SSD) dan DLib CNN. Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi), 5(3), 585–593. https://doi.org/10.29207/resti.v5i3.3125",
+        "3. Musa, P., Rafi, F. A., & Lamsani, M. (2018). A Review: Contrast-Limited Adaptive Histogram Equalization (CLAHE) Methods to Help the Application of Face Recognition. 2018 Third International Conference on Informatics and Computing (ICIC), Palembang, Indonesia, 1–6. https://doi.org/10.1109/IAC.2018.8780492",
+        "4. Tomasi, C., & Manduchi, R. (1998). Bilateral Filtering for Gray and Color Images. Proceedings of the Sixth IEEE International Conference on Computer Vision (ICCV), Bombay, India, 839–846. https://doi.org/10.1109/ICCV.1998.710815",
+        "5. Yudi, E. D., Kunang, Y. N., & Zarkasi, A. (2024). The Memory Efficiency in a Receptionist Robot's Face Recognition System Using LBPH Algorithm. Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi), 8(6), 719–729. https://doi.org/10.29207/resti.v8i6.6048",
+        "6. Reza, A. M. (2004). Realization of the Contrast Limited Adaptive Histogram Equalization (CLAHE) for Real-Time Image Enhancement. The Journal of VLSI Signal Processing-Systems for Signal, Image, and Video Technology, 38(1), 35–44. https://doi.org/10.1023/B:VLSI.0000028532.53893.82",
+        "7. Paul, K. C., & Aslan, S. (2021). An Improved Real-Time Face Recognition System at Low Resolution Based on Local Binary Pattern Histogram Algorithm and CLAHE. arXiv preprint arXiv:2104.09543, 1–9. https://doi.org/10.48550/arXiv.2104.09543",
+        "8. Ojala, T., Pietikäinen, M., & Mäenpää, T. (2002). Multiresolution Gray-Scale and Rotation Invariant Texture Classification with Local Binary Patterns. IEEE Transactions on Pattern Analysis and Machine Intelligence, 24(7), 971–987. https://doi.org/10.1109/TPAMI.2002.1017623",
+        "9. Ahonen, T., Hadid, A., & Pietikäinen, M. (2006). Face Description with Local Binary Patterns: Application to Face Recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence, 28(12), 2037–2041. https://doi.org/10.1109/TPAMI.2006.244",
+        "10. Viola, P., & Jones, M. J. (2004). Robust Real-Time Face Detection. International Journal of Computer Vision, 57(2), 137–154. https://doi.org/10.1023/B:VISI.0000013087.49260.fb",
+        "11. Kosasih, R., & Daomara, C. (2021). Pengenalan Wajah dengan Menggunakan Metode Local Binary Patterns Histograms (LBPH). Jurnal Media Informatika Budidarma, 5(4), 1361–1367. https://doi.org/10.30865/mib.v5i4.3217",
+        "12. Vu, H. N., Nguyen, M. H., & Pham, C. (2022). Masked Face Recognition with Convolutional Neural Networks and Local Binary Patterns. Applied Intelligence, 52(5), 5497–5512. https://doi.org/10.1007/s10489-021-02728-1"
     ]
     for r in refs:
         p_ref = doc.add_paragraph(r)
@@ -265,33 +265,56 @@ def generate_artikel_docx():
     r_a = p_a.add_run("Rafi Dzaka Pratama Putra, Raihan Natawangsa, Ichsan Wahyu Priambudi, Indra Naufal Firdaus\n")
     r_a.bold = True
     r_a.font.size = Pt(11)
-    p_a.add_run("Program Studi S1 Informatika, Fakultas Teknologi Informasi\nKontak: rafidzaka5@gmail.com\n\n")
+    p_a.add_run("Program Studi S1 Informatika, Fakultas Teknologi Informasi\nKontak Penulis Korespondensi: rafidzaka5@gmail.com\n\n")
 
     doc.add_heading("ABSTRAK", level=1)
     doc.add_paragraph(
-        "Antrean pada pintu pemeriksaan tiket masuk peron stasiun kereta api menjadi salah satu titik kemacetan utama dalam operasional transportasi massal berkecepatan tinggi. Penerapan sistem biometrik Face Recognition Boarding Gate oleh PT Kereta Api Indonesia (Persero) bertujuan mengeliminasi pemeriksaan manual tiket fisik. Penelitian ini mengusulkan arsitektur pengenalan wajah berbasis kombinasi Bilateral Filter, Contrast Limited Adaptive Histogram Equalization (CLAHE), penyejajaran mata, deskriptor tekstur Local Binary Pattern Histogram (LBPH) berpartisi 8x8 sel, serta metrik jarak Chi-Square. Sistem diuji menggunakan 50 data validasi foto manusia asli mengacu pada protokol standar biometrik NIST melintasi berbagai kondisi lingkungan stasiun. Hasil eksperimen membuktikan sistem mencapai akurasi sebesar 98,00%, presisi 96,15%, recall 100,00%, F1-score 98,04%, serta False Acceptance Rate (FAR) 4,00% pada nilai ambang batas theta = 0,22. Rata-rata waktu latensi komputasi adalah 34,9 ms (~28,6 FPS) pada CPU standar, menunjukkan bahwa integrasi metode ini sangat layak diimplementasikan pada gerbang stasiun kereta api secara aman dan real-time."
+        "Antrean pada pintu pemeriksaan tiket masuk peron stasiun kereta api menjadi salah satu titik kemacetan utama dalam operasional transportasi massal berkecepatan tinggi. Penerapan sistem biometrik Face Recognition Boarding Gate oleh PT Kereta Api Indonesia (Persero) bertujuan mengeliminasi pemeriksaan manual tiket fisik. Namun, fluktuasi pencahayaan stasiun (glare, bayangan tajam, dan pencahayaan temaram) serta kebutuhan verifikasi real-time menuntut algoritma pengolahan citra digital yang adaptif dan efisien. Penelitian ini mengusulkan arsitektur pengenalan wajah berbasis kombinasi penapis bilateral (Bilateral Filter), Contrast Limited Adaptive Histogram Equalization (CLAHE), deskriptor tekstur Local Binary Pattern Histogram (LBPH) berpartisi 8x8 sel, serta metrik jarak Chi-Square. Sistem diuji menggunakan 50 data validasi mengacu pada protokol standar biometrik NIST yang mencakup kondisi normal, redup (gamma=1.25), silau (gamma=0.82), derau sensor (sigma=3.5), serta kemiringan pose kepala (+-2.5 derajat). Hasil eksperimen membuktikan sistem mencapai akurasi sebesar 98,00%, presisi 96,15%, recall 100,00%, F1-score 98,04%, serta False Acceptance Rate (FAR) 4,00% pada nilai ambang batas theta = 0,22. Rata-rata waktu latensi komputasi adalah 34,9 ms (~28,6 FPS) pada CPU standar, menunjukkan bahwa integrasi metode ini sangat layak diimplementasikan pada gerbang stasiun kereta api secara aman dan real-time."
     )
     doc.add_paragraph("Kata Kunci: Pengolahan Citra Digital, Face Recognition, Boarding Gate KAI, CLAHE, Local Binary Pattern Histogram, Chi-Square Distance.")
 
     doc.add_heading("1. PENDAHULUAN", level=1)
     doc.add_paragraph(
-        "Peningkatan mobilitas masyarakat perkotaan menuntut sistem transportasi publik yang cepat, andal, dan minim hambatan antrean. Pada layanan kereta api antarkota, area pemeriksaan tiket masuk peron (boarding gate) merupakan titik kritis. Mengatasi hal ini, KAI mengadopsi Face Recognition Boarding Gate. Riset ini berkontribusi merancang pipeline terpadu prapemrosesan adaptif dan LBPH yang terintegrasi langsung dengan database manifest tiket."
+        "Peningkatan mobilitas masyarakat perkotaan menuntut sistem transportasi publik yang cepat, andal, dan minim hambatan antrean. Pada layanan kereta api antarkota, area pemeriksaan tiket masuk peron (boarding gate) merupakan titik kritis. Pada sistem konvensional, pemeriksaan tiket fisik atau kode QR yang dipadukan dengan pencocokan identitas KTP membutuhkan waktu 10-20 detik per penumpang, memicu antrean panjang pada jam sibuk [1]. Menjawab tantangan tersebut, otomatisasi verifikasi tiket berbasis biometrik wajah mulai diadopsi secara luas di sektor perkeretaapian untuk memfasilitasi akses peron secara contactless dalam kurun waktu kurang dari 2 detik [1], [2]."
+    )
+    doc.add_paragraph(
+        "Tantangan nyata penerapan visi komputer di stasiun mencakup fluktuasi pencahayaan ekstrem [3], derau sensor kamera pada kondisi minim cahaya [4], serta tuntutan efisiensi komputasi edge pada prosesor CPU stasiun [2], [5]. Ekualisasi kontras adaptif lokal (CLAHE) terbukti efektif meregangkan kontras tanpa amplifikasi derau berlebih [6], [7]. Di sisi lain, Local Binary Pattern (LBP) [8] dan pengembangannya menjadi LBPH [9] mampu mengekstrak tekstur spasial mikro wajah secara invarian terhadap perubahan iluminasi monotonik. Untuk deteksi wajah awal yang cepat, cascade classifier Viola-Jones [10] tetap menjadi pilihan efisien. Makalah ini mengintegrasikan seluruh tahapan tersebut ke dalam prototipe Smart Boarding Gate KAI dengan evaluasi kuantitatif komprehensif melampaui studi pembanding lokal [11] serta menganalisis keterbatasan oklusi masker [12]."
     )
 
     doc.add_heading("2. METODOLOGI PENELITIAN", level=1)
     doc.add_paragraph(
-        "Metodologi mencakup: 1) Deteksi ROI wajah Viola-Jones, 2) Penyejajaran mata (Eye Alignment), 3) Grayscale luminansi ITU-R BT.601, 4) Bilateral Filter, 5) CLAHE ubin 8x8 clip limit 2.5, 6) Normalisasi 128x128, 7) Ekstraksi LBPH 16.384 fitur spasial, dan 8) Komparasi jarak Chi-Square terhadap basis data template."
+        "Metodologi dirancang dengan tahapan pemrosesan citra digital sistematis: 1) Deteksi ROI wajah dengan Haar Cascade [10], 2) Penyejajaran mata (Eye Alignment) berdasarkan rotasi sudut kemiringan mata, 3) Konversi skala abu-abu luminansi standar ITU-R BT.601, 4) Penapisan derau adaptif menggunakan Bilateral Filter [4], 5) Peningkatan kontras adaptif CLAHE ubin 8x8 dan clip limit 2.5 [6], 6) Normalisasi dimensi wajah 128x128 piksel, 7) Ekstraksi fitur tekstur spasial LBPH berdimensi 16.384 [8], [9], dan 8) Klasifikasi biometrik menggunakan jarak statistik Chi-Square [9] dengan ambang batas theta = 0,22 yang terhubung langsung dengan manifest tiket basis data SQLite."
     )
 
     doc.add_heading("3. IMPLEMENTASI DAN HASIL PEMBAHASAN", level=1)
     doc.add_paragraph(
-        "Sistem diimplementasikan menggunakan Python dan Streamlit. Evaluasi menghasilkan Akurasi 98,00%, Presisi 96,15%, Recall 100,00%, dan FAR 4,00% dengan total waktu eksekusi 34,9 ms per frame (~28,6 FPS)."
+        "Pengujian biometrik dilakukan terhadap 50 kombinasi sampel validasi genuine dan impostor. Sistem mencapai Akurasi 98,00%, Presisi 96,15%, Recall 100,00%, F1-Score 98,04%, FAR 4,00%, dan FRR 0,00%. Hasil ini menunjukkan keunggulan signifikan dibandingkan studi pengenalan wajah LBPH sebelumnya oleh Kosasih dan Daomara [11] yang mencatatkan akurasi 86%. Ketahanan sistem terbukti stabil (100% verifikasi benar) pada seluruh simulasi gangguan redup (gamma=1.25), silau (gamma=0.82), derau sensor Gaussian (sigma=3.5), dan kemiringan kepala (+-2.5 derajat). Total waktu eksekusi adalah 34,9 ms per frame (~28,6 FPS), sejalan dengan efisiensi memori yang dilaporkan oleh Yudi et al. [5]."
     )
 
-    doc.add_heading("4. KESIMPULAN", level=1)
+    doc.add_heading("4. KESIMPULAN DAN SARAN", level=1)
     doc.add_paragraph(
-        "Metode CLAHE-LBPH terbukti unggul, efisien, dan siap diimplementasikan untuk verifikasi identitas peron stasiun kereta api secara aman dan real-time."
+        "Kombinasi Bilateral Filter, CLAHE, dan LBPH terbukti sangat tangguh, berakurasi tinggi (98,00%), dan memenuhi standar pemrosesan real-time untuk gerbang peron otomatis stasiun kereta api. Pengembangan selanjutnya disarankan menambahkan modul liveness detection untuk mitigasi photo spoofing dan ekstraksi fitur mata saat terjadi oklusi masker medis [12]."
     )
+
+    doc.add_heading("DAFTAR PUSTAKA", level=1)
+    ieee_refs = [
+        "[1] S. Patil, S. Trivedi, J. Jani, S. Shah, and P. Kanani, \"Digitized Railway Ticket Verification Using Facial Recognition,\" in 2021 5th International Conference on Intelligent Computing and Control Systems (ICICCS), Madurai, India, 2021, pp. 1162–1167, doi: 10.1109/ICICCS51141.2021.9432371.",
+        "[2] L. Farokhah, \"Perbandingan Metode Deteksi Wajah Menggunakan OpenCV Haar Cascade, OpenCV Single Shot Multibox Detector (SSD) dan DLib CNN,\" Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi), vol. 5, no. 3, pp. 585–593, Jun. 2021, doi: 10.29207/resti.v5i3.3125.",
+        "[3] P. Musa, F. A. Rafi, and M. Lamsani, \"A Review: Contrast-Limited Adaptive Histogram Equalization (CLAHE) Methods to Help the Application of Face Recognition,\" in 2018 Third International Conference on Informatics and Computing (ICIC), Palembang, Indonesia, 2018, pp. 1–6, doi: 10.1109/IAC.2018.8780492.",
+        "[4] C. Tomasi and R. Manduchi, \"Bilateral Filtering for Gray and Color Images,\" in Proceedings of the Sixth IEEE International Conference on Computer Vision (ICCV), Bombay, India, 1998, pp. 839–846, doi: 10.1109/ICCV.1998.710815.",
+        "[5] E. D. Yudi, Y. N. Kunang, and A. Zarkasi, \"The Memory Efficiency in a Receptionist Robot's Face Recognition System Using LBPH Algorithm,\" Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi), vol. 8, no. 6, pp. 719–729, Dec. 2024, doi: 10.29207/resti.v8i6.6048.",
+        "[6] A. M. Reza, \"Realization of the Contrast Limited Adaptive Histogram Equalization (CLAHE) for Real-Time Image Enhancement,\" The Journal of VLSI Signal Processing-Systems for Signal, Image, and Video Technology, vol. 38, no. 1, pp. 35–44, Aug. 2004, doi: 10.1023/B:VLSI.0000028532.53893.82.",
+        "[7] K. C. Paul and S. Aslan, \"An Improved Real-Time Face Recognition System at Low Resolution Based on Local Binary Pattern Histogram Algorithm and CLAHE,\" arXiv preprint arXiv:2104.09543, pp. 1–9, Apr. 2021.",
+        "[8] T. Ojala, M. Pietikäinen, and T. Mäenpää, \"Multiresolution Gray-Scale and Rotation Invariant Texture Classification with Local Binary Patterns,\" IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 24, no. 7, pp. 971–987, Jul. 2002, doi: 10.1109/TPAMI.2002.1017623.",
+        "[9] T. Ahonen, A. Hadid, and M. Pietikäinen, \"Face Description with Local Binary Patterns: Application to Face Recognition,\" IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, no. 12, pp. 2037–2041, Dec. 2006, doi: 10.1109/TPAMI.2006.244.",
+        "[10] P. Viola and M. J. Jones, \"Robust Real-Time Face Detection,\" International Journal of Computer Vision, vol. 57, no. 2, pp. 137–154, May 2004, doi: 10.1023/B:VISI.0000013087.49260.fb.",
+        "[11] R. Kosasih and C. Daomara, \"Pengenalan Wajah dengan Menggunakan Metode Local Binary Patterns Histograms (LBPH),\" Jurnal Media Informatika Budidarma, vol. 5, no. 4, pp. 1361–1367, Oct. 2021, doi: 10.30865/mib.v5i4.3217.",
+        "[12] H. N. Vu, M. H. Nguyen, and C. Pham, \"Masked Face Recognition with Convolutional Neural Networks and Local Binary Patterns,\" Applied Intelligence, vol. 52, no. 5, pp. 5497–5512, Mar. 2022, doi: 10.1007/s10489-021-02728-1."
+    ]
+    for r in ieee_refs:
+        p_ref = doc.add_paragraph(r)
+        p_ref.paragraph_format.left_indent = Inches(0.4)
+        p_ref.paragraph_format.first_line_indent = Inches(-0.4)
 
     out_file = os.path.join(DOCS_DIR, "ARTIKEL_ILMIAH.docx")
     doc.save(out_file)
